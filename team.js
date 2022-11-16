@@ -67,7 +67,7 @@ function addTeamMember() {
         choices: [
           "Engineer",
           "Intern",
-          "I have enough members.  Let me see my team!",
+          "I have enough team members.  Let me see my team!",
         ],
       },
     ])
