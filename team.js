@@ -67,7 +67,7 @@ function addTeamMember() {
         choices: [
           "Engineer",
           "Intern",
-          "I don't want to add any more team members",
+          "I have enough members.  Let me see my team!",
         ],
       },
     ])
@@ -198,10 +198,10 @@ function generateHTML(html) {
   <title>Team Profile Generator</title>
   <style>
   body {
-    background-color: crimson; ;
+    background-color: slategrey; ;
   }
   .card-header {
-    background-color: cornflowerblue;
+    background-color: steelblue;
   }
   .card-body {
     background-color: white;
@@ -213,7 +213,8 @@ function generateHTML(html) {
   }
   .navbar {
     height: 5em;
-    background-color: cornflowerblue;
+    background-color: steelblue;
+    
   }
   </style>
 
@@ -223,7 +224,7 @@ function generateHTML(html) {
   <body>
   <header>
   <nav class="navbar navbar-dark">
-  <span class="navbar-brand mb-0 h1 w-100 text-center">My Team</span>
+  <span class="navbar-brand mb-0 h4 w-100 text-center">My Team</span>
   </nav>
   </header>
   <main>

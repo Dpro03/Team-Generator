@@ -18,7 +18,7 @@ function engineerCard(engineer) {
   }</a></li>
                 <li class="list-group
                 -item">GitHub: <a href="
-                https//github.com/${
+                https://github.com/${
                   engineer.github
                 }" target="_blank" rel="noopener noreferrer">${
     engineer.github
