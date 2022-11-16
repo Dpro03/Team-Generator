@@ -45,7 +45,7 @@ THEN I exit the application, and the HTML is generated
 
 Make sure you have node.js installed.  In the command line, the user types node team.js.  The user then is prompted to enter information about the manager of the team.
 
-After that, the user then gas the option of populating the team with engineers and interns, and entering information about the team members through prompts.
+After that, the user then has the option of populating the team with engineers and interns, and entering information about the team members through prompts.
 
 Once all of the information is entered for all of the team members, the user can choose the option "I have enough team members.  Let me see my team!"
 
