@@ -64,7 +64,11 @@ function addTeamMember() {
         type: "list",
         name: "role",
         message: "Which type of team member would you like to add?",
-        choices: ["Engineer", "Intern", "I don't want to add any more team members"],
+        choices: [
+          "Engineer",
+          "Intern",
+          "I don't want to add any more team members",
+        ],
       },
     ])
     .then((data) => {
@@ -104,7 +108,12 @@ function engineerInfo() {
       },
     ])
     .then((data) => {
-      const engineer = new Engineer(data.name, data.id, data.email, data.github);
+      const engineer = new Engineer(
+        data.name,
+        data.id,
+        data.email,
+        data.github
+      );
       team.push(engineer);
       addTeamMember();
     });
@@ -147,29 +156,30 @@ function generateTeam() {
   if (!fs.existsSync(outputDir)) {
     fs.mkdirSync(outputDir);
   }
-  fs.writeFileSync
-  (outputPath, render(team), "utf-8");
+  fs.writeFileSync(outputPath, render(team), "utf-8");
 }
 
 //function to render team
 function render(team) {
   const html = [];
-  html.push(team
-    .filter((employee) => employee.getRole() === "Manager")
-    .map((manager) => managerCard(manager))
+  html.push(
+    team
+      .filter((employee) => employee.getRole() === "Manager")
+      .map((manager) => managerCard(manager))
   );
-  html.push(team
-    .filter((employee) => employee.getRole() === "Engineer")
-    .map((engineer) => engineerCard(engineer))
-    .join("")
+  html.push(
+    team
+      .filter((employee) => employee.getRole() === "Engineer")
+      .map((engineer) => engineerCard(engineer))
+      .join("")
   );
-  html.push(team
-    .filter((employee) => employee.getRole() === "Intern")
-    .map((intern) => internCard(intern))
-    .join("")
+  html.push(
+    team
+      .filter((employee) => employee.getRole() === "Intern")
+      .map((intern) => internCard(intern))
+      .join("")
   );
   return generateHTML(html.join(""));
-
 }
 
 //function to generate HTML
@@ -188,12 +198,22 @@ function generateHTML(html) {
   <title>Team Profile Generator</title>
   <style>
   body {
-    background-color: yellow;
+    background-color: crimson; ;
+  }
+  .card-header {
+    background-color: cornflowerblue;
+  }
+  .card-body {
+    background-color: white;
   }
   .card {
     width: 18rem;
     margin: 20px;
-    background-color: hotpink;
+    border: 2px solid black;
+  }
+  .navbar {
+    height: 5em;
+    background-color: cornflowerblue;
   }
   </style>
 
@@ -202,7 +222,7 @@ function generateHTML(html) {
 
   <body>
   <header>
-  <nav class="navbar navbar-dark bg-dark">
+  <nav class="navbar navbar-dark">
   <span class="navbar-brand mb-0 h1 w-100 text-center">My Team</span>
   </nav>
   </header>
@@ -222,13 +242,3 @@ function generateHTML(html) {
 }
 
 managerInfo();
-
-
-
-
-
-
-
-
-
-
