@@ -49,9 +49,11 @@ After that, the user then has the option of populating the team with engineers a
 
 Once all of the information is entered for all of the team members, the user can choose the option "I have enough team members.  Let me see my team!"
 
-That will create a well formatted html page with the team's information, including working email and Github links so the user can stay connected with other team
+That will create a well formatted html page with the team's information, including working email and Github links so the user can stay connected with other team members.
 
-members.
+## Link to video demonstrating application's testing and functionality
+
+https://drive.google.com/file/d/13RDORbc0DVGgJmTrGWNDzclP78di0tcz/view
 
 
 
